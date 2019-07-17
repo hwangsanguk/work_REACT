@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>circle</title>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <script type="text/babel"> 
+    //선언위치가 중요
+    //class 아래에 선언을 해줘야 실행함
+
+   class Circle extends React.Component{
+       render(){
+           var circleStyle = {
+               padding: "10px",
+               margin: "20px",
+               display : "inline-block",
+               backgroundColor: this.props.bgColor,
+               borderRadius: "50%",
+               width:"100px",
+               height: "100px"
+           }
+           
+           return (
+            <div style={circleStyle}>
+            </div>
+           )    
+       }
+   }
+
+   var circleColor = <Circle bgColor = "green" />
+
+   function showColor() {
+       var colors = ['#393e41', '#e94f37', '#1c89bf','#a1d363'];
+        var ran = Math.floor(Math.random()*colors.length);
+
+    return <Circle bgColor ={colors[ran]} />;
+   } 
+
+   var renderData = [];
+   function showColor1() {
+        var colors = ['#393e41', '#e94f37', '#1c89bf','#a1d363'];
+        var ran = Math.floor(Math.random()*colors.length);
+        renderData.push(<Circle bgColor={colors[ran]} />)
+   }
+
+   showColor1()
+   showColor1()
+   showColor1()
+
+
+    ReactDOM.render(
+      <div>
+       {circleColor}
+       {showColor()}
+       {renderData}
+        <Circle bgColor = "orange"/>
+      </div>
+        ,document.body
+
+    )
+    
+    </script>
+    
+</body>
+</html>

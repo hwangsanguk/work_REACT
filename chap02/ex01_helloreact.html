@@ -1,0 +1,57 @@
+<!-- 07.15.월요일 -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>REACT-Test</title>
+    
+    <!-- REACT링크 (google에 react cdn 검색) -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    
+    <!-- babel 링크 -->
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+    <style>
+            /* #target {
+                background-color: tomato;
+                padding: 10px;
+            } */
+
+         div h1 {
+             font-size: 100px;
+         }
+        </style>
+
+</head>
+<body>
+    <h1>REACT TEST</h1>
+    <hr />
+    <div id="target"></div>
+    <!-- id="target"을 지정해 줌으로써 react의 목적지를 지정 -->
+
+    
+<script type="text/babel">//babel 이 나중에 javascript로 변환하기때문에 ex6 ,ex7문법을 쓰게됨
+    
+    var destination = document.querySelector('#target');
+        //react 에서 document.querySelector('#target') 으로 보내는데
+        //이것은 destination 으로 변수지정
+    ReactDOM.render(
+       //react 에서 사용하는 html문법
+       //여러 tag를 사용할때는 div(혹은 form 등) 으로 묶어서 사용해야함
+       <div>
+        <h1> 황상욱 </h1>
+        <h2>Title2</h2>
+        <span>문자열</span> 
+        <p>문단</p>
+        </div>,
+        destination
+        //document.querySelector('#target')를 사용해도 됨
+        // jsx는 자바스크립트 언어를 사용
+        //reactdom 에 렌더링 하는 안에는 html과 비슷하지만 html과 조금 다르다
+        
+    );//ex6 ,ex7문법을 쓰게됨
+</script>
+</body>
+</html>

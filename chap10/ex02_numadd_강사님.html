@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count</title>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+    <script type="text/babel">
+
+   class Counter extends React.Component{
+
+       render(){
+           var counterStyle = {
+
+           }
+
+           return (
+             <div style = {counterStyle}>
+                {this.props.countvalue}
+             </div>
+           )
+       }
+   }
+
+
+
+   class CountDisplay extends React.Component{
+    constructor (props){
+        super(props);
+
+        this.state ={
+            countvalue : 0
+        }
+    }
+    handleClick = (evt) => {
+        this.setState({
+            countvalue : this.state.countvalue + 1
+        })
+    }
+    handleClick1 = (evt) => {
+        this.setState({
+            countvalue : this.state.countvalue - 1
+        })
+    }
+    handleClick2 = (evt) => {
+        this.setState({
+            countvalue : 0
+        })
+    }
+
+       render(){
+           return(
+                <div>
+                    <Counter  countvalue={this.state.countvalue} />
+                    <button onClick = {this.handleClick}>+</button>
+                    <button onClick = {this.handleClick1}>-</button>
+                    <button onClick = {this.handleClick2}>reset</button>
+                </div>
+            )
+
+       }
+   }
+
+ 
+
+    ReactDOM.render(
+      <div>
+        <CountDisplay />
+      </div>
+        ,document.body
+
+    )
+    
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HERO_01</title>
+
+     
+     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+     <script crossorigin src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+
+    <style>
+    #target {
+        border: 1px solid blue;
+    }
+    #target h1 {
+        background-color: tomato;
+        margin: 10px;
+        padding: 10px;
+    }
+    </style>
+
+</head>
+<body>
+    <h1>컴포넌트 사용 후</h1>
+<div id="target"></div>
+
+
+<script type="text/babel">
+    var target = document.querySelector('#target');
+
+
+    //Component 사용
+    class HelloHero extends React.Component{//대소문자 구분 잘해야함
+        render(){ //render 함수는 항상 return 해야함
+            return (
+                <div>
+                <h1>{this.props.heroname}</h1> 
+                </div>
+            ) //this.props는 고정 그뒤에는 class지정
+        }
+    }
+
+    ReactDOM.render(
+        <div>
+        <HelloHero heroname="Batman"/>
+        <HelloHero heroname="Itronman"/>
+        <HelloHero heroname="Superman"/>
+        </div>,
+        target
+    )//div 안에 hellhero 라는 컴포넌트가 들어감
+//ReactDOM, React.Component 중요, react (부모) 가 호출하는 컴포넌트 hellohero가 자식
+
+    </script>
+    
+</body>
+</html>

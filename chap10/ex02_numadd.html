@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Count</title>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+
+<body>
+    <script type="text/babel">
+
+   class Count extends React.Component{
+
+       render(){
+
+           return (
+               <div>
+               <p >{this.props.num}</p>
+               </div>
+            //    <button onClick={this.handleClick}>+</button>
+           )
+       }
+   }
+
+   class Countbox extends React.Component{
+       render(){
+           var boxStyle ={
+               width : '300px',
+               height: '500px',
+               backgroundColor: 'yellow',
+               textAlign: 'center',
+               fontSize : "50px"
+           }
+           return(
+               <div style={boxStyle}>
+               <Count {...this.props}/>
+               </div>
+           )
+
+       }
+   }
+
+ 
+
+    ReactDOM.render(
+      <div>
+        <Countbox num="1" />
+      </div>
+        ,document.body
+
+    )
+    
+    </script>
+
+</body>
+
+</html>
