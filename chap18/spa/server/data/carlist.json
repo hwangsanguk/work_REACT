@@ -1,0 +1,50 @@
+[
+    {
+        "carNumber": "11주1111",
+        "owner":"홍길동",
+        "model":"sonata",
+        "company":"hyundai",
+        "numOfAccident":"5",
+        "numOfOwnerChange":"2"
+    },
+    {
+        "carNumber": "22주2222",
+        "owner":"황길동",
+        "model":"sonata",
+        "company":"hyundai",
+        "numOfAccident":"5",
+        "numOfOwnerChange":"2"
+    },
+    {
+        "carNumber": "33주3333",
+        "owner":"김길동",
+        "model":"sonata",
+        "company":"hyundai",
+        "numOfAccident":"5",
+        "numOfOwnerChange":"2"
+    },
+    {
+        "carNumber": "44주4444",
+        "owner":"유길동",
+        "model":"sonata",
+        "company":"hyundai",
+        "numOfAccident":"5",
+        "numOfOwnerChange":"2"
+    },
+    {
+        "carNumber": "55주5555",
+        "owner":"안길동",
+        "model":"sonata",
+        "company":"hyundai",
+        "numOfAccident":"5",
+        "numOfOwnerChange":"2"
+    },
+    {
+        "carNumber": "66주6666",
+        "owner":"방길동",
+        "model":"sonata",
+        "company":"hyundai",
+        "numOfAccident":"5",
+        "numOfOwnerChange":"2"
+    }
+]
