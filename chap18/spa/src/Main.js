@@ -3,7 +3,7 @@ import {Route, NavLink, HashRouter} from 'react-router-dom';
 import Home from './Home'; //라우터를 통해 Home.js로
 import Stuff from './Stuff';//라우터를 통해 Stuff.js로
 import Contact from './Contact';//라우터를 통해 Contact.js로
-
+import Login from './Login';
 import './Main.scss'
 
 
